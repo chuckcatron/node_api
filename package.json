@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node -r esm .",
+    "start8": "node -r esm .",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
     "debug": "DEBUG=* node -r esm .",
     "dev": "node -r esm ./node_modules/nodemon/bin/nodemon.js .",
     "test": "mocha ./test/*"
@@ -22,8 +23,7 @@
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.0",
-    "helmet": "^4.2.0",
-    "pm2": "^4.5.0"
+    "helmet": "^4.2.0"
   },
   "devDependencies": {
     "mocha": "^8.2.1",
